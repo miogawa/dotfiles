@@ -1,0 +1,14 @@
+escape ^Tt
+hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w"
+termcapinfo xterm* ti@:te@
+vbell off
+bind k kill
+bind ^k kill
+bind s split
+bind ^s split
+bind q only
+bind ^q only
+bind x remove
+bind ^x remove
+bind a title
+bind ^a title

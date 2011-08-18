@@ -1,0 +1,6 @@
+EDITOR=vim
+PAGER="less -r"
+FTP_PASSIVE=1
+PS1='[\u@\h \W]\$ '
+PS2='> '
+export EDITOR PAGER FTP_PASSIVE PS1 PS2
