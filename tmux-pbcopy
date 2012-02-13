@@ -1,0 +1,7 @@
+#!/bin/sh
+
+tmux save-buffer ~/.tmux-buffer &&
+cat ~/.tmux-buffer | pbcopy &&
+tmux display-message "Copied to Clipboard"
+
+rm -f ~/.tmux-buffer

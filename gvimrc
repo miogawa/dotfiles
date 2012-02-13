@@ -15,10 +15,15 @@ set lines=40
 " {{{ Font
 
 if has('gui_macvim')
-  set guifont:M+2VM+IPAG\ circle\ Regular:h14
+  set guifont:Migu-1M-regular:h14
 elseif has('win32')
   set guifont:MeiryoKe_Gothic:h10
 endif
+
+" }}}
+" {{{ Clipbard
+
+set clipboard=unnamed
 
 " }}}
 " {{{ Key Mapping
