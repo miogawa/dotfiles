@@ -166,8 +166,11 @@ nnoremap q: qq:
 nnoremap q/ qq/
 nnoremap q? qq?
 
-noremap <C-]> <Esc>
-inoremap <C-]> <Esc>
+noremap <C-]> <ESC>
+inoremap <C-]> <ESC>
+
+" Shortcut of highlight is off
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
 
 " }}}
 " {{{ Variables
