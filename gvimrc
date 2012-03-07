@@ -15,7 +15,7 @@ set lines=40
 " {{{ Font
 
 if has('gui_macvim')
-  set guifont:Migu-1M-regular:h14
+  set guifont:Ricty:h14
 elseif has('win32')
   set guifont:MeiryoKe_Gothic:h10
 endif
