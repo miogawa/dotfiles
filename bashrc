@@ -1,7 +1,3 @@
-if [ -f ~/.bash_profile ]; then
-  . ~/.bash_profile
-fi
-
 uname=`uname`
 
 if [ $uname = "Darwin" ]; then
