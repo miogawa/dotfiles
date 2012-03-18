@@ -2,7 +2,7 @@
 
 gui
 colorscheme default
-hi StatusLine term=reverse cterm=reverse,bold ctermbg=red ctermfg=white gui=reverse,bold guibg=white guifg=#DF0000
+hi StatusLine term=reverse cterm=bold ctermbg=red ctermfg=white gui=bold guibg=#DF0000 guifg=white
 
 " }}}
 " {{{ Window

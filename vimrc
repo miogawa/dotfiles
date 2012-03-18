@@ -137,6 +137,9 @@ syntax on
 
 " Use default color scheme
 colorscheme default
+hi StatusLine term=reverse cterm=bold ctermbg=red ctermfg=white gui=bold guibg=#DF0000 guifg=white
+
+
 
 " }}}
 " {{{ About file handling
