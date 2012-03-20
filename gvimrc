@@ -8,7 +8,7 @@ hi StatusLine term=reverse cterm=bold ctermbg=red ctermfg=white gui=bold guibg=#
 " {{{ Window
 
 " Window Size
-set columns=80
+set columns=84
 set lines=40
 
 " }}}
