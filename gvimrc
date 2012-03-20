@@ -23,7 +23,7 @@ endif
 " }}}
 " {{{ Clipbard
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 " }}}
 " {{{ Key Mapping
