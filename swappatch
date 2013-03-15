@@ -1,0 +1,24 @@
+diff --git tmux.conf tmux.conf
+index b3a07b9..c3a2884 100644
+--- tmux.conf
++++ tmux.conf
+@@ -73,10 +73,15 @@ bind-key C-Right select-layout even-horizontal
+ bind-key Down select-layout tiled
+ bind-key C-Down select-layout tiled
+ 
+-bind-key a new-window -a \; swap-pane -s:-
+-bind-key C-a new-window -a \; swap-pane -s:-
+-bind-key s swap-pane -s:- \; kill-pane
+-bind-key C-s swap-pane -s:- \; kill-pane
++#bind-key a new-window -a \; swap-pane -s:-
++#bind-key C-a new-window -a \; swap-pane -s:-
++#bind-key s swap-pane -s:- \; kill-pane
++#bind-key C-s swap-pane -s:- \; kill-pane
++bind-key a pipe-pane "tmux display -p | awk '{print $2 $5}' | sed 's/:.*,/\./g' > /tmp/tmuxswap \;tmux new-window -a \;tmux swap-pane -s:- \;tmux display -p | awk '{print $2 $5}' | sed 's/:.*,/\./g' >> /tmp/tmuxswap"
++bind-key C-a pipe-pane "tmux display -p | awk '{print $2 $5}' | sed 's/:.*,/\./g' > /tmp/tmuxswap \;tmux new-window -a \;tmux swap-pane -s:- \;tmux display -p | awk '{print $2 $5}' | sed 's/:.*,/\./g' >> /tmp/tmuxswap"
++bind-key s pipe-pane "tmux swap-pane -s `tail -n 1 /tmp/tmuxswap` -t `head -n 1 /tmp/tmuxswap` \;tmux kill-pane -t `tail -n 1 /tmp/tmuxswap` \; rm -f /tmp/tmuxswap"
++bind-key C-s pipe-pane "tmux swap-pane -s `tail -n 1 /tmp/tmuxswap` -t `head -n 1 /tmp/tmuxswap` \;tmux kill-pane -t `tail -n 1 /tmp/tmuxswap` \; rm -f /tmp/tmuxswap"
++
+ 
+ bind-key 4 split-window -h \; split-window -h \; split-window -h \; select-layout tiled \; select-pane -t :.+
+ 
